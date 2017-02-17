@@ -3,16 +3,35 @@
 		<title>
 			Cadastro de Usuário
 		</title>
+		<script type="text/javascript">
+			function exibirSenha() {
+				var elSenha=document.getElementById("txtSenha");
+				var nomeBotao=document.getElementById("nomeBotao")
+
+				if(elSenha.type=="text"){
+					nomeBotao.value="Mostrar Senha"
+					elSenha.type="password";
+					
+
+				}else{
+					elSenha.type="text";
+					nomeBotao.value="Ocultar Senha"
+
+				}
+
+			}
+
+		</script>
 
 		<body>
 			<form>
-				<label id="lblUsername"> Nome </label>
+				<label id="lblUsername"> <b><u>Nome</b></u> </label>
 				<Input type="text" value="" name="txtNome" id="txtNome"/>
 				
-				<label id="lblPasssword"> Senha </label>
-				<Input type="text" value="" name="txtSenha" id="txtSenha"/>
-				<Input type="submit" value="Salvar" />	
-
+				<label id="lblPasssword"> <b><u>Senha</b></u> </label>
+				<Input type="password" name="txtSenha" id="txtSenha"/>
+				<button><b>Salvar</b> </button>
+				<input id="nomeBotao" type="button" onclick="exibirSenha();" value="Ver Senha" />
 			</form>
 
 		</body>
