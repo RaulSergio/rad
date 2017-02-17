@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title><b>Exercicio 1 - 16/02/2017</b></title>
+	</head>
+	<script type="text/javascript">
+			function trocaTudo() {
+				var x=document.getElementById("txtNome1").value;
+				txtNome1.value=document.getElementById("txtNome2").value;
+				txtNome2.value=x;
+			}
+
+		</script>
+
+		<body>
+			<form>
+				<label > <b><u>C1</b></u> </label>
+				<Input type="text" value="" name="txtNome1" id="txtNome1"/>
+				
+				<label > <b><u>C2</b></u> </label>
+				<Input type="text" value="" name="txtNome2" id="txtNome2"/>
+				<input id="nomeBotao" type="button" onclick="trocaTudo();" value="Trocar" />
+			</form>
+
+		</body>
+
+
+
+</html>
